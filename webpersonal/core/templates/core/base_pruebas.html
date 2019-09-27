@@ -1,0 +1,27 @@
+<!--Indicar con HTML5: para crear la forma correcta de indicar que estamos en html-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %} | Mi web personal</title>
+</head>
+<body>
+    <!---Cabecera y menú-->
+    <!---{%url 'nombre de la url'}-->
+    <h1>Mi web Personal</h1>
+    <ul>
+        <li><a href="{% url 'home' %}">Portada</a></li>
+        <li><a href="{% url 'about' %}">Acerca de</a></li>
+        <li><a href="{% url 'porta' %}">Portafolio</a></li>
+        <li><a href="{% url 'contact' %}">Contacto</a></li>
+    </ul>
+    <!--Contenido-->
+    <!--Creamos una etiqueta de template 
+        llamada TACC Block, sirve para definir un bloque de contenido con un nombre-->
+    {% block content %} {% endblock %}
+</body>
+</html>
+
+
